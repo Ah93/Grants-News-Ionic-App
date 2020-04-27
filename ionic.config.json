@@ -1,5 +1,7 @@
 {
   "name": "grantsNews",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngFor="let data of grantDetails">{{data.title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" *ngFor="let data of grantDetails">
+  <ion-card>
+    <ion-img src="{{data.Image}}"></ion-img>
+  </ion-card>
+
+  <h3> {{data.title}}</h3>
+ 
+  <p>
+    {{data.Description}}
+  </p>
+  <ion-button expand="block" href="https://isdbscholarships.smartsimple.com/iface/ex/ax_index.jsp">
+    Go To Website
+  </ion-button>
+  <ion-button expand="block" (click)="copy(data.title)"  color="success"> 
+    Copy Link
+  </ion-button>
+</ion-content>
+ 
